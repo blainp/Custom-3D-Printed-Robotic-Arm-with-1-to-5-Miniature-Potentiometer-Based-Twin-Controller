@@ -11,7 +11,10 @@ A fully custom, 3D-printed robotic arm utilizing 4 NEMA 17 joints with 3D printe
 ## Project Overview
 
 <p align="center">
-<img width="600" alt="PLACEHOLDER - full arm glamour shot" src="" />
+<img width="500" height="600" alt="FinalRobotArmPNG" src="https://github.com/user-attachments/assets/16cb6c80-8e17-448b-934a-791ced426ac2" style="background-color: #010409;" />
+<img width="500" height="600" alt="Gemini_Generated_Image_wv3endwv3endwv3e (1)" src="https://github.com/user-attachments/assets/e3cbd5e3-f8db-4ea4-9059-88ec55b0ac9d" />
+
+
 </p>
 
 This project is a fully custom 1-meter robotic arm, 4 stepper-driven joints plus a servo wrist and claw. It is entirely 3D printed, including the gearboxes, except for 1 metal 71:1 planetary gearbox utilized on the lowest shoulder joint due to torque constraints and gear slippage. It was designed in Fusion 360 as a complete assembly first, then refined during the build, arm lengths, screw holes, and mounting points all went through minor revisions as issues came up on the bench.

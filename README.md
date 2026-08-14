@@ -2,8 +2,8 @@
 A fully custom, 3D-printed robotic arm utilizing 4 NEMA 17 joints with 3D printed gearboxes in addition to 2 MG996R servo motors. Controlled via Arduino and a Python/tkinter interface utilizing a custom controller which is a scaled-down replica of the arm using potentiometers in place of motors (with a switch for claw actuation) as an intuitive physical input device.
 
 <p align="center">
-<img width="500" height="500" alt="ImageToStl com_ModelRobotArm step (1)" src="https://github.com/user-attachments/assets/d884b007-47e7-4f2a-899d-c51433145355" />
-<img width="500" height="500" alt="ImageToStl com_potentiometer+knob+v2 step" src="https://github.com/user-attachments/assets/50e3c30f-8a51-46f6-9174-8a63ff34b130" />
+<img width="400" height="400" alt="ImageToStl com_ModelRobotArm step (1)" src="https://github.com/user-attachments/assets/d884b007-47e7-4f2a-899d-c51433145355" />
+<img width="400" height="400" alt="ImageToStl com_potentiometer+knob+v2 step" src="https://github.com/user-attachments/assets/50e3c30f-8a51-46f6-9174-8a63ff34b130" />
 </p>
 
 ---
@@ -11,8 +11,8 @@ A fully custom, 3D-printed robotic arm utilizing 4 NEMA 17 joints with 3D printe
 ## Project Overview
 
 <p align="center">
-<img width="500" height="600" alt="FinalRobotArmPNG" src="https://github.com/user-attachments/assets/16cb6c80-8e17-448b-934a-791ced426ac2" style="background-color: #010409;" />
-<img width="500" height="600" alt="Gemini_Generated_Image_wv3endwv3endwv3e (1)" src="https://github.com/user-attachments/assets/e3cbd5e3-f8db-4ea4-9059-88ec55b0ac9d" />
+<img width="400" height="500" alt="FinalRobotArmPNG" src="https://github.com/user-attachments/assets/16cb6c80-8e17-448b-934a-791ced426ac2" style="background-color: #010409;" />
+<img width="400" height="500" alt="Gemini_Generated_Image_wv3endwv3endwv3e (1)" src="https://github.com/user-attachments/assets/e3cbd5e3-f8db-4ea4-9059-88ec55b0ac9d" />
 
 
 </p>

@@ -2,8 +2,8 @@
 A fully custom, 3D-printed robotic arm utilizing 4 NEMA 17 joints with 3D printed gearboxes in addition to 2 MG996R servo motors. Controlled via Arduino and a Python/tkinter interface utilizing a custom controller which is a scaled-down replica of the arm using potentiometers in place of motors (with a switch for claw actuation) as an intuitive physical input device.
 
 <p align="center">
-<img width="450" height="450" alt="ImageToStl com_potentiometer+knob+v2 step" src="https://github.com/user-attachments/assets/50e3c30f-8a51-46f6-9174-8a63ff34b130" />
-<img width="450" height="450" alt="ImageToStl com_ModelRobotArm step (1)" src="https://github.com/user-attachments/assets/d884b007-47e7-4f2a-899d-c51433145355" />
+<img width="400" height="400" alt="ImageToStl com_potentiometer+knob+v2 step" src="https://github.com/user-attachments/assets/50e3c30f-8a51-46f6-9174-8a63ff34b130" />
+<img width="400" height="400" alt="ImageToStl com_ModelRobotArm step (1)" src="https://github.com/user-attachments/assets/d884b007-47e7-4f2a-899d-c51433145355" />
 </p>
 
 ---
@@ -11,8 +11,8 @@ A fully custom, 3D-printed robotic arm utilizing 4 NEMA 17 joints with 3D printe
 ## Project Overview
 
 <p align="center">
-<img width="450" height="550" alt="636259470-e3cbd5e3-f8db-4ea4-9059-88ec55b0ac9d (3)" src="https://github.com/user-attachments/assets/d2de7196-6e24-484a-9688-bf4670c581c0" />
-<img width="450" height="550" alt="636255024-16cb6c80-8e17-448b-934a-791ced426ac2 (2)" src="https://github.com/user-attachments/assets/78ff26d0-3015-492f-9985-d7cacdf6fda5" />
+<img width="400" height="500" alt="636259470-e3cbd5e3-f8db-4ea4-9059-88ec55b0ac9d (3)" src="https://github.com/user-attachments/assets/d2de7196-6e24-484a-9688-bf4670c581c0" />
+<img width="400" height="500" alt="636255024-16cb6c80-8e17-448b-934a-791ced426ac2 (2)" src="https://github.com/user-attachments/assets/78ff26d0-3015-492f-9985-d7cacdf6fda5" />
 
 
 
@@ -24,9 +24,9 @@ This project is a fully custom 1-meter robotic arm, 4 stepper-driven joints plus
 
 The arm uses 4 NEMA 17 stepper motors (base, shoulder1, shoulder2, elbow) driving custom 3D printed planetary gearboxes, plus an MG996R servo for wrist rotation and a second servo for claw actuation.
 
-**Gearboxes:** Three of the four upper stepper joints use a modified version of [this 80:1 NEMA 17 planetary gearbox](https://www.printables.com/model/202734-801-nema-17-planetary-gearbox/comments), adjusted for the shaft length of the motors used here. Cycloidal designs were also considered, but with limited access to the hardware needed to machine/print those reliably at the time, the planetary route was used instead for its relative simplicity.
+**Gearboxes:** Three of the four upper joints use a modified version of [this 80:1 NEMA 17 planetary gearbox](https://www.printables.com/model/202734-801-nema-17-planetary-gearbox/comments), adjusted for the shaft length of the motors used here. Cycloidal designs were also considered, but with limited access to the hardware needed to machine/print those reliably at the time, the planetary route was used instead for its relative simplicity.
 
-**Base joint:** The 3D printed gearbox held up fine on the upper joints but skipped under the torque loading at the base elbow, since it carries the weight of everything above it. The base motor was swapped to an off-the-shelf [71:1 metal planetary gearbox, H-type shaft](https://www.aliexpress.com/item/1005006217641964.html) instead.
+**Base joint:** The 3D printed gearbox held up fine on the upper joints, but skipped under the torque loading at the base elbow when fully extended, since it carries the weight of everything above it. The base motor was swapped to an off-the-shelf [71:1 metal planetary gearbox, H-type shaft](https://www.aliexpress.com/item/1005006217641964.html) instead.
 
 **Claw:** The gripper itself is a modified version of [this flexible MG995/MG996R servo gripper](https://cults3d.com/en/3d-model/various/robot-gripper-flexible-servo-mg995-mg996r), adapted to mount onto the wrist assembly.
 
@@ -36,7 +36,7 @@ The arm uses 4 NEMA 17 stepper motors (base, shoulder1, shoulder2, elbow) drivin
 
 ### Control Scheme
 
-Keyboard control was tried first, but with 5 independent axes it was hard to track which key drove which joint. The current setup uses a 1:5 scale physical twin of the arm as the input device: potentiometers stand in for each motor, and a switch on the mini controller handles the claw's open/closed state.
+Keyboard control was tried first, but with 5 independent axes it was hard to track which key drove which joint. The current setup uses a 1:5 scale physical twin of the arm as the input device with potentiometers standing in for each motor, and a switch on the mini controller end which handles the claw's open/closed state.
 
 The system runs across two Arduinos and one Python/tkinter app:
 
@@ -61,7 +61,7 @@ The system runs across two Arduinos and one Python/tkinter app:
 ## Features
 
 ### Fully Custom Arm
-- 4 NEMA 17 stepper joints plus servo-driven wrist rotation and claw, entirely 3D printed including the gearboxes except for the base.
+- 4 NEMA 17 stepper joints plus servo-driven wrist rotation and claw, entirely 3D printed, including the gearboxes, except for the base gearbox.
 - Custom 80:1 planetary gearboxes on the upper joints, metal 71:1 gearbox on the base after torque-related issues with the printed version.
 
 ### Closed-Loop Joint Control
@@ -123,5 +123,5 @@ The original all-printed gearbox design skips under sustained load on the base j
 ### Potentiometer Noise
 Raw pot readings are noisy enough on their own that both a median filter and an EMA low-pass are needed before the values are usable as targets, worth keeping in mind for anyone wiring their own control-arm pots, especially over longer leads.
 
-### PLACEHOLDER
-Additional constraints/future work to be added.
+### Motor Location Reporting
+Currently, due to the nature of NEMA17 stepper motors, their absolute positioning in relation to their current angle, which is sent between the arduino and python programs, is prone to error. The lack of a rotary encoder on the output of such gearboxes means that the NEMA17s rotations are simply divided by the 80:1 figure of the gearboxes' output. These modified figures are then reported to the python program, and there is no verification or error handling of motor positions in the event of a skipped gearbox. Although it is very rare that any of the current gearboxes skip when exclusively under the weight of the arm, accidental contact with a foreign body, or the ground, can cause such skipping, and mis-align the virtual and physical angles of a motor. Therefore, perhaps the most important future improvement to such a system would be rotary encoders on gearbox outputs to verify and report angles of rotation more accurately.

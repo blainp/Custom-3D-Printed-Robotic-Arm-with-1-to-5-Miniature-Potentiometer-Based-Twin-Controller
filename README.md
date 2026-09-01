@@ -3,8 +3,8 @@ A fully custom, 3D-printed robotic arm utilizing 4 NEMA 17 joints with 3D printe
 
 
 <p align="center">
-<img width="400" height="400" alt="ImageToStl com_potentiometer+knob+v2 step" src="https://github.com/user-attachments/assets/50e3c30f-8a51-46f6-9174-8a63ff34b130" />
 <img width="400" height="400" alt="ImageToStl com_ModelRobotArm step (1)" src="https://github.com/user-attachments/assets/d884b007-47e7-4f2a-899d-c51433145355" />
+<img width="400" height="400" alt="ImageToStl com_potentiometer+knob+v2 step" src="https://github.com/user-attachments/assets/50e3c30f-8a51-46f6-9174-8a63ff34b130" />
 </p>
 
 <!--<table align="center" style="border-collapse: collapse; border: none;">
